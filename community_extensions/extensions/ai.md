@@ -101,13 +101,34 @@ docs:
       https://leonardovida.github.io/duckdb-ai/docs/cookbooks
     - For agents, the full docs as one text file: https://leonardovida.github.io/duckdb-ai/llms-full.txt
 
-extension_star_count: 16
-extension_star_count_pretty: 16
-extension_download_count: 710
-extension_download_count_pretty: 710
+extension_star_count: 17
+extension_star_count_pretty: 17
+extension_download_count: 881
+extension_download_count_pretty: 881
 image: '/images/community_extensions/social_preview/preview_community_extension_ai.png'
 layout: community_extension_doc
 ---
+### Compatibility Matrix
+
+This table covers all DuckDB releases that have not reached [end-of-life](https://endoflife.date/duckdb), including LTS releases, and shows the 2 most recent patch releases of each. Older patch releases are not listed, but the extension may be available for them as well.
+
+<div class="extension_compatibility_table"></div>
+
+| Platform | 1.4.4 | 1.4.5 | 1.5.5 | 1.5.6 |
+| :--- | :---: | :---: | :---: | :---: |
+| Linux AMD64 | ❌ | ❌ | ✅ | ✅ |
+| Linux ARM64 | ❌ | ❌ | ✅ | ✅ |
+| Linux AMD64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| Linux ARM64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| macOS AMD64 | ❌ | ❌ | ✅ | ✅ |
+| macOS ARM64 | ❌ | ❌ | ✅ | ✅ |
+| Windows AMD64 | ❌ | ❌ | ✅ | ✅ |
+| Windows ARM64 | ❌ | ❌ | ❌ | ❌ |
+| Windows AMD64 (MinGW) | ❌ | ❌ | ✅ | ✅ |
+| WebAssembly (MVP) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (EH) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (threads) | ❌ | ❌ | ❌ | ❌ |
+
 
 ### Installing and Loading
 ```sql

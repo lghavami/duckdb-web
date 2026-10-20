@@ -8,7 +8,7 @@ excerpt: |
 extension:
   name: duck_block_utils
   description: Build, transform, validate, and extract content from structured documents using the duck_block type
-  version: 3.5.0
+  version: 3.5.1
   language: C++
   build: cmake
   license: MIT
@@ -21,8 +21,8 @@ repo:
   # so advancing this pin would point a v1.4.5 build at a tree that cannot build for
   # it. v1.4.5 users should move to the v1.5.x track.
   andium: 125662df9e5450105dc9b7957ad955cb53d7beec
-  ref: e00db69840d9f74ba60f4e536800b9093f3c9190
-  ref_next: e00db69840d9f74ba60f4e536800b9093f3c9190
+  ref: 531b0596017773ec5d3eee1e71e25361a5d49525
+  ref_next: 531b0596017773ec5d3eee1e71e25361a5d49525
 docs:
   hello_world: |
     -- Build a document programmatically
@@ -209,11 +209,32 @@ docs:
 
 extension_star_count: 4
 extension_star_count_pretty: 4
-extension_download_count: 1145
+extension_download_count: 1087
 extension_download_count_pretty: 1.1k
 image: '/images/community_extensions/social_preview/preview_community_extension_duck_block_utils.png'
 layout: community_extension_doc
 ---
+### Compatibility Matrix
+
+This table covers all DuckDB releases that have not reached [end-of-life](https://endoflife.date/duckdb), including LTS releases, and shows the 2 most recent patch releases of each. Older patch releases are not listed, but the extension may be available for them as well.
+
+<div class="extension_compatibility_table"></div>
+
+| Platform | 1.4.4 | 1.4.5 | 1.5.5 | 1.5.6 |
+| :--- | :---: | :---: | :---: | :---: |
+| Linux AMD64 | ✅ | ✅ | ✅ | ✅ |
+| Linux ARM64 | ✅ | ✅ | ✅ | ✅ |
+| Linux AMD64 (musl) | ✅ | ✅ | ❌ | ❌ |
+| Linux ARM64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| macOS AMD64 | ✅ | ✅ | ✅ | ✅ |
+| macOS ARM64 | ✅ | ✅ | ✅ | ✅ |
+| Windows AMD64 | ✅ | ✅ | ✅ | ✅ |
+| Windows ARM64 | ❌ | ❌ | ❌ | ❌ |
+| Windows AMD64 (MinGW) | ✅ | ✅ | ✅ | ✅ |
+| WebAssembly (MVP) | ✅ | ✅ | ✅ | ✅ |
+| WebAssembly (EH) | ✅ | ✅ | ✅ | ✅ |
+| WebAssembly (threads) | ✅ | ✅ | ✅ | ✅ |
+
 
 ### Installing and Loading
 ```sql

@@ -55,11 +55,32 @@ extended_description: |
 
 extension_star_count: 1
 extension_star_count_pretty: 1
-extension_download_count: 666
-extension_download_count_pretty: 666
+extension_download_count: 721
+extension_download_count_pretty: 721
 image: '/images/community_extensions/social_preview/preview_community_extension_mmcif.png'
 layout: community_extension_doc
 ---
+### Compatibility Matrix
+
+This table covers all DuckDB releases that have not reached [end-of-life](https://endoflife.date/duckdb), including LTS releases, and shows the 2 most recent patch releases of each. Older patch releases are not listed, but the extension may be available for them as well.
+
+<div class="extension_compatibility_table"></div>
+
+| Platform | 1.4.4 | 1.4.5 | 1.5.5 | 1.5.6 |
+| :--- | :---: | :---: | :---: | :---: |
+| Linux AMD64 | ❌ | ❌ | ✅ | ✅ |
+| Linux ARM64 | ❌ | ❌ | ✅ | ✅ |
+| Linux AMD64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| Linux ARM64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| macOS AMD64 | ❌ | ❌ | ✅ | ✅ |
+| macOS ARM64 | ❌ | ❌ | ✅ | ✅ |
+| Windows AMD64 | ❌ | ❌ | ✅ | ✅ |
+| Windows ARM64 | ❌ | ❌ | ❌ | ❌ |
+| Windows AMD64 (MinGW) | ❌ | ❌ | ✅ | ✅ |
+| WebAssembly (MVP) | ❌ | ❌ | ✅ | ✅ |
+| WebAssembly (EH) | ❌ | ❌ | ✅ | ✅ |
+| WebAssembly (threads) | ❌ | ❌ | ✅ | ✅ |
+
 
 ### Installing and Loading
 ```sql
@@ -82,12 +103,13 @@ LOAD {{ page.extension.name }};
 
 <div class="extension_functions_table"></div>
 
-|    function_name    | function_type |                                                      description                                                      | comment |                                              examples                                               |
-|---------------------|---------------|-----------------------------------------------------------------------------------------------------------------------|---------|-----------------------------------------------------------------------------------------------------|
-| mmcif_columns       | table         | List the categories and columns in an mmCIF file, with their dictionary documentation links and inferred types.       | NULL    | [SELECT * FROM mmcif_columns('https://files.rcsb.org/download/1AMB.cif.gz'); -- 342 rows]           |
-| mmcif_relationships | table         | List the parent/child key relationships between the categories in an mmCIF file, each side as a (table, column) pair. | NULL    | [SELECT * FROM mmcif_relationships('https://files.rcsb.org/download/1AMB.cif.gz'); -- 86 rows]      |
-| mmcif_scan          | table         | Scan one mmCIF category as a table, reading its rows directly from a .cif or .cif.gz file.                            | NULL    | [SELECT * FROM mmcif_scan('https://files.rcsb.org/download/1AMB.cif.gz', 'atom_site'); -- 438 rows] |
-| mmcif_tables        | table         | List the categories in an mmCIF file with their dictionary documentation links and column counts.                     | NULL    | [SELECT * FROM mmcif_tables('https://files.rcsb.org/download/1AMB.cif.gz');]                        |
+|    function_name    | function_type |                                                                                                                                                                                                                                                                                                                  description                                                                                                                                                                                                                                                                                                                   | comment |                                                                             examples                                                                             |
+|---------------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| mmcif_blocks        | table         | List data block names in file order, without the data_ prefix.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | NULL    | [SELECT * FROM mmcif_blocks('structures.cif');]                                                                                                                  |
+| mmcif_columns       | table         | List the categories and columns in an mmCIF file, with their dictionary documentation links and inferred types. Select a block with data_block := 'name'; defaults to the first block.                                                                                                                                                                                                                                                                                                                                                                                                                                                         | NULL    | [SELECT * FROM mmcif_columns('https://files.rcsb.org/download/1AMB.cif.gz');]                                                                                    |
+| mmcif_relationships | table         | List the parent/child key relationships between the categories in an mmCIF file, each side as a (table, column) pair. Select a block with data_block := 'name'; defaults to the first block.                                                                                                                                                                                                                                                                                                                                                                                                                                                   | NULL    | [SELECT * FROM mmcif_relationships('https://files.rcsb.org/download/1AMB.cif.gz');]                                                                              |
+| mmcif_scan          | table         | Scan one mmCIF category from a file path, glob, or list of paths/globs. Plain CIF and gzip inputs are supported. Multiple matched files add a filename column containing the concrete source path. Select a block with data_block := 'name'; defaults to the first block. Use column_source := 'dictionary' (default) for all bundled category columns and lazy parallel readers capped by threads. Missing items are typed NULLs and absent known categories yield no rows. Unknown categories or items in the requested category error; use column_source := 'files' to discover the column union from input files and include custom items. | NULL    | [SELECT * FROM mmcif_scan('https://files.rcsb.org/download/1AMB.cif.gz', 'atom_site');, SELECT count(*) FROM mmcif_scan('structures/**/*.cif.gz', 'atom_site');] |
+| mmcif_tables        | table         | List the categories in an mmCIF file with their dictionary documentation links and column counts, single-row constraints, descriptions, category groups and mandatory flags. Dictionary metadata is independent of observed rows; unavailable metadata is NULL. Select a block with data_block := 'name'; defaults to the first block.                                                                                                                                                                                                                                                                                                         | NULL    | [SELECT * FROM mmcif_tables('https://files.rcsb.org/download/1AMB.cif.gz');]                                                                                     |
 
 ### Overloaded Functions
 

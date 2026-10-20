@@ -8,7 +8,7 @@ excerpt: |
 extension:
   name: raquet
   description: "Raster analytics on Raquet files with QUADBIN spatial indexing, raster ingestion, and PostGIS-style functions"
-  version: 0.2.8
+  version: 0.2.9
   language: C++
   build: cmake
   license: Apache-2.0
@@ -19,7 +19,7 @@ extension:
 
 repo:
   github: CartoDB/duckdb-raquet
-  ref: df3a8e8896c5e27236a571761ac092c91fca4d74
+  ref: 37bc15566f2ad89e039e1462aabc060d31bfbc60
 
 docs:
   hello_world: |
@@ -62,11 +62,32 @@ docs:
 
 extension_star_count: 16
 extension_star_count_pretty: 16
-extension_download_count: 2129
-extension_download_count_pretty: 2.1k
+extension_download_count: 2205
+extension_download_count_pretty: 2.2k
 image: '/images/community_extensions/social_preview/preview_community_extension_raquet.png'
 layout: community_extension_doc
 ---
+### Compatibility Matrix
+
+This table covers all DuckDB releases that have not reached [end-of-life](https://endoflife.date/duckdb), including LTS releases, and shows the 2 most recent patch releases of each. Older patch releases are not listed, but the extension may be available for them as well.
+
+<div class="extension_compatibility_table"></div>
+
+| Platform | 1.4.4 | 1.4.5 | 1.5.5 | 1.5.6 |
+| :--- | :---: | :---: | :---: | :---: |
+| Linux AMD64 | ❌ | ❌ | ✅ | ✅ |
+| Linux ARM64 | ❌ | ❌ | ✅ | ✅ |
+| Linux AMD64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| Linux ARM64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| macOS AMD64 | ❌ | ❌ | ✅ | ✅ |
+| macOS ARM64 | ❌ | ❌ | ✅ | ✅ |
+| Windows AMD64 | ❌ | ❌ | ❌ | ❌ |
+| Windows ARM64 | ❌ | ❌ | ❌ | ❌ |
+| Windows AMD64 (MinGW) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (MVP) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (EH) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (threads) | ❌ | ❌ | ❌ | ❌ |
+
 
 ### Installing and Loading
 ```sql

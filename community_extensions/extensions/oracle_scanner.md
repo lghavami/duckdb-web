@@ -24,13 +24,34 @@ repo:
   # The DuckDB 2.0 port of v0.4.0 (branch duckdb-2.0-v0.4), built against v2.0-cyanoptera.
   ref_next: 5ffbef1e789012650aea6d85026b7c6fca8cae1e
 
-extension_star_count: 3
-extension_star_count_pretty: 3
-extension_download_count: 1054
+extension_star_count: 4
+extension_star_count_pretty: 4
+extension_download_count: 1061
 extension_download_count_pretty: 1.1k
 image: '/images/community_extensions/social_preview/preview_community_extension_oracle_scanner.png'
 layout: community_extension_doc
 ---
+### Compatibility Matrix
+
+This table covers all DuckDB releases that have not reached [end-of-life](https://endoflife.date/duckdb), including LTS releases, and shows the 2 most recent patch releases of each. Older patch releases are not listed, but the extension may be available for them as well.
+
+<div class="extension_compatibility_table"></div>
+
+| Platform | 1.4.4 | 1.4.5 | 1.5.5 | 1.5.6 |
+| :--- | :---: | :---: | :---: | :---: |
+| Linux AMD64 | ❌ | ❌ | ✅ | ✅ |
+| Linux ARM64 | ❌ | ❌ | ✅ | ✅ |
+| Linux AMD64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| Linux ARM64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| macOS AMD64 | ❌ | ❌ | ✅ | ✅ |
+| macOS ARM64 | ❌ | ❌ | ✅ | ✅ |
+| Windows AMD64 | ❌ | ❌ | ✅ | ✅ |
+| Windows ARM64 | ❌ | ❌ | ❌ | ❌ |
+| Windows AMD64 (MinGW) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (MVP) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (EH) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (threads) | ❌ | ❌ | ❌ | ❌ |
+
 
 ### Installing and Loading
 ```sql

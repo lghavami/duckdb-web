@@ -19,6 +19,7 @@ extension:
 repo:
   github: shijianjs/duckfn-statrs
   ref: 19cc9b83328d373d894ebb15bb043e8f4b1bf76c
+  ref_next: e485353d030e7de3dd62eae9b7cd791a2b4d9411
 
 docs:
   hello_world: |
@@ -64,11 +65,32 @@ docs:
 
 extension_star_count: 0
 extension_star_count_pretty: 0
-extension_download_count: 305
-extension_download_count_pretty: 305
+extension_download_count: 512
+extension_download_count_pretty: 512
 image: '/images/community_extensions/social_preview/preview_community_extension_duckfn_statrs.png'
 layout: community_extension_doc
 ---
+### Compatibility Matrix
+
+This table covers all DuckDB releases that have not reached [end-of-life](https://endoflife.date/duckdb), including LTS releases, and shows the 2 most recent patch releases of each. Older patch releases are not listed, but the extension may be available for them as well.
+
+<div class="extension_compatibility_table"></div>
+
+| Platform | 1.4.4 | 1.4.5 | 1.5.5 | 1.5.6 |
+| :--- | :---: | :---: | :---: | :---: |
+| Linux AMD64 | ❌ | ❌ | ❌ | ✅ |
+| Linux ARM64 | ❌ | ❌ | ❌ | ✅ |
+| Linux AMD64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| Linux ARM64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| macOS AMD64 | ❌ | ❌ | ❌ | ✅ |
+| macOS ARM64 | ❌ | ❌ | ❌ | ✅ |
+| Windows AMD64 | ❌ | ❌ | ❌ | ✅ |
+| Windows ARM64 | ❌ | ❌ | ❌ | ❌ |
+| Windows AMD64 (MinGW) | ❌ | ❌ | ❌ | ✅ |
+| WebAssembly (MVP) | ❌ | ❌ | ❌ | ✅ |
+| WebAssembly (EH) | ❌ | ❌ | ❌ | ✅ |
+| WebAssembly (threads) | ❌ | ❌ | ❌ | ✅ |
+
 
 ### Installing and Loading
 ```sql

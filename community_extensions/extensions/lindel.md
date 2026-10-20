@@ -22,13 +22,34 @@ repo:
   github: query-farm/lindel
   ref: 6f8501a9213852286053946981f23b467a45bcd6
 
-extension_star_count: 68
-extension_star_count_pretty: 68
-extension_download_count: 3444
-extension_download_count_pretty: 3.4k
+extension_star_count: 67
+extension_star_count_pretty: 67
+extension_download_count: 3546
+extension_download_count_pretty: 3.5k
 image: '/images/community_extensions/social_preview/preview_community_extension_lindel.png'
 layout: community_extension_doc
 ---
+### Compatibility Matrix
+
+This table covers all DuckDB releases that have not reached [end-of-life](https://endoflife.date/duckdb), including LTS releases, and shows the 2 most recent patch releases of each. Older patch releases are not listed, but the extension may be available for them as well.
+
+<div class="extension_compatibility_table"></div>
+
+| Platform | 1.4.4 | 1.4.5 | 1.5.5 | 1.5.6 |
+| :--- | :---: | :---: | :---: | :---: |
+| Linux AMD64 | ✅ | ✅ | ✅ | ✅ |
+| Linux ARM64 | ✅ | ✅ | ✅ | ✅ |
+| Linux AMD64 (musl) | ✅ | ✅ | ❌ | ❌ |
+| Linux ARM64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| macOS AMD64 | ✅ | ✅ | ✅ | ✅ |
+| macOS ARM64 | ✅ | ✅ | ✅ | ✅ |
+| Windows AMD64 | ✅ | ✅ | ✅ | ✅ |
+| Windows ARM64 | ❌ | ❌ | ❌ | ❌ |
+| Windows AMD64 (MinGW) | ✅ | ✅ | ✅ | ✅ |
+| WebAssembly (MVP) | ✅ | ✅ | ✅ | ✅ |
+| WebAssembly (EH) | ✅ | ✅ | ✅ | ✅ |
+| WebAssembly (threads) | ✅ | ✅ | ✅ | ✅ |
+
 
 ### Installing and Loading
 ```sql

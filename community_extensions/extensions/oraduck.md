@@ -52,13 +52,34 @@ docs:
     indexes UNUSABLE until they are rebuilt.
     Benchmark, type mapping and limitations: https://github.com/hugues31/oraduck
 
-extension_star_count: 2
-extension_star_count_pretty: 2
-extension_download_count: 661
-extension_download_count_pretty: 661
+extension_star_count: 3
+extension_star_count_pretty: 3
+extension_download_count: 739
+extension_download_count_pretty: 739
 image: '/images/community_extensions/social_preview/preview_community_extension_oraduck.png'
 layout: community_extension_doc
 ---
+### Compatibility Matrix
+
+This table covers all DuckDB releases that have not reached [end-of-life](https://endoflife.date/duckdb), including LTS releases, and shows the 2 most recent patch releases of each. Older patch releases are not listed, but the extension may be available for them as well.
+
+<div class="extension_compatibility_table"></div>
+
+| Platform | 1.4.4 | 1.4.5 | 1.5.5 | 1.5.6 |
+| :--- | :---: | :---: | :---: | :---: |
+| Linux AMD64 | ❌ | ❌ | ✅ | ✅ |
+| Linux ARM64 | ❌ | ❌ | ✅ | ✅ |
+| Linux AMD64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| Linux ARM64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| macOS AMD64 | ❌ | ❌ | ❌ | ❌ |
+| macOS ARM64 | ❌ | ❌ | ❌ | ❌ |
+| Windows AMD64 | ❌ | ❌ | ✅ | ✅ |
+| Windows ARM64 | ❌ | ❌ | ❌ | ❌ |
+| Windows AMD64 (MinGW) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (MVP) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (EH) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (threads) | ❌ | ❌ | ❌ | ❌ |
+
 
 ### Installing and Loading
 ```sql

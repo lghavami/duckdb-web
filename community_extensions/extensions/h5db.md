@@ -8,7 +8,7 @@ excerpt: |
 extension:
   name: h5db
   description: Read HDF5 datasets and attributes
-  version: 1.3.1
+  version: 1.3.2
   language: C++
   build: cmake
   license: MIT
@@ -18,7 +18,7 @@ extension:
     - jokasimr
 repo:
   github: jokasimr/h5db
-  ref: 3b952308fc68614e25c1bed02d446ef69e899fa0
+  ref: 7de598959594ef86ccc838e64bf0e45fef315857
   andium: v0.3.0
 
 docs:
@@ -45,11 +45,32 @@ docs:
 
 extension_star_count: 6
 extension_star_count_pretty: 6
-extension_download_count: 792
-extension_download_count_pretty: 792
+extension_download_count: 891
+extension_download_count_pretty: 891
 image: '/images/community_extensions/social_preview/preview_community_extension_h5db.png'
 layout: community_extension_doc
 ---
+### Compatibility Matrix
+
+This table covers all DuckDB releases that have not reached [end-of-life](https://endoflife.date/duckdb), including LTS releases, and shows the 2 most recent patch releases of each. Older patch releases are not listed, but the extension may be available for them as well.
+
+<div class="extension_compatibility_table"></div>
+
+| Platform | 1.4.4 | 1.4.5 | 1.5.5 | 1.5.6 |
+| :--- | :---: | :---: | :---: | :---: |
+| Linux AMD64 | ✅ | ❌ | ✅ | ✅ |
+| Linux ARM64 | ✅ | ❌ | ✅ | ✅ |
+| Linux AMD64 (musl) | ✅ | ❌ | ❌ | ❌ |
+| Linux ARM64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| macOS AMD64 | ✅ | ❌ | ✅ | ✅ |
+| macOS ARM64 | ✅ | ❌ | ✅ | ✅ |
+| Windows AMD64 | ✅ | ❌ | ✅ | ✅ |
+| Windows ARM64 | ❌ | ❌ | ❌ | ❌ |
+| Windows AMD64 (MinGW) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (MVP) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (EH) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (threads) | ❌ | ❌ | ❌ | ❌ |
+
 
 ### Installing and Loading
 ```sql

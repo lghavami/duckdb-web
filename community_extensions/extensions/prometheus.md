@@ -19,7 +19,7 @@ extension:
 
 repo:
   github: botan/duckdb-prometheus
-  ref: 9d8c511355b21444e5051c1e6d35f90e260ef8ac
+  ref: 698928aad1e0bafeb451f4cea32de7aea979c28a
 
 docs:
   hello_world: |
@@ -46,11 +46,32 @@ docs:
 
 extension_star_count: 6
 extension_star_count_pretty: 6
-extension_download_count: 762
-extension_download_count_pretty: 762
+extension_download_count: 627
+extension_download_count_pretty: 627
 image: '/images/community_extensions/social_preview/preview_community_extension_prometheus.png'
 layout: community_extension_doc
 ---
+### Compatibility Matrix
+
+This table covers all DuckDB releases that have not reached [end-of-life](https://endoflife.date/duckdb), including LTS releases, and shows the 2 most recent patch releases of each. Older patch releases are not listed, but the extension may be available for them as well.
+
+<div class="extension_compatibility_table"></div>
+
+| Platform | 1.4.4 | 1.4.5 | 1.5.5 | 1.5.6 |
+| :--- | :---: | :---: | :---: | :---: |
+| Linux AMD64 | ❌ | ❌ | ✅ | ✅ |
+| Linux ARM64 | ❌ | ❌ | ✅ | ✅ |
+| Linux AMD64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| Linux ARM64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| macOS AMD64 | ❌ | ❌ | ✅ | ✅ |
+| macOS ARM64 | ❌ | ❌ | ✅ | ✅ |
+| Windows AMD64 | ❌ | ❌ | ✅ | ✅ |
+| Windows ARM64 | ❌ | ❌ | ❌ | ❌ |
+| Windows AMD64 (MinGW) | ❌ | ❌ | ✅ | ✅ |
+| WebAssembly (MVP) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (EH) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (threads) | ❌ | ❌ | ❌ | ❌ |
+
 
 ### Installing and Loading
 ```sql

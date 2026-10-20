@@ -31,13 +31,34 @@ docs:
     Users are allowed to implement their own driver and worker(s), and register to the duckdb client-side, as long they speaks duckherder dialect (i.e., grpc stubs and arrow flight).
     From users' perspective, all DML and DDL SQL statements should be used exactly the same as local duckdb.
 
-extension_star_count: 158
-extension_star_count_pretty: 158
-extension_download_count: 665
-extension_download_count_pretty: 665
+extension_star_count: 164
+extension_star_count_pretty: 164
+extension_download_count: 756
+extension_download_count_pretty: 756
 image: '/images/community_extensions/social_preview/preview_community_extension_duckherder.png'
 layout: community_extension_doc
 ---
+### Compatibility Matrix
+
+This table covers all DuckDB releases that have not reached [end-of-life](https://endoflife.date/duckdb), including LTS releases, and shows the 2 most recent patch releases of each. Older patch releases are not listed, but the extension may be available for them as well.
+
+<div class="extension_compatibility_table"></div>
+
+| Platform | 1.4.4 | 1.4.5 | 1.5.5 | 1.5.6 |
+| :--- | :---: | :---: | :---: | :---: |
+| Linux AMD64 | ✅ | ❌ | ✅ | ✅ |
+| Linux ARM64 | ✅ | ❌ | ✅ | ✅ |
+| Linux AMD64 (musl) | ✅ | ❌ | ❌ | ❌ |
+| Linux ARM64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| macOS AMD64 | ✅ | ❌ | ✅ | ✅ |
+| macOS ARM64 | ✅ | ❌ | ✅ | ✅ |
+| Windows AMD64 | ❌ | ❌ | ❌ | ❌ |
+| Windows ARM64 | ❌ | ❌ | ❌ | ❌ |
+| Windows AMD64 (MinGW) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (MVP) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (EH) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (threads) | ❌ | ❌ | ❌ | ❌ |
+
 
 ### Installing and Loading
 ```sql

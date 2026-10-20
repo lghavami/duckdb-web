@@ -134,11 +134,32 @@ docs:
 
 extension_star_count: 0
 extension_star_count_pretty: 0
-extension_download_count: 655
-extension_download_count_pretty: 655
+extension_download_count: 790
+extension_download_count_pretty: 790
 image: '/images/community_extensions/social_preview/preview_community_extension_lance_conversion.png'
 layout: community_extension_doc
 ---
+### Compatibility Matrix
+
+This table covers all DuckDB releases that have not reached [end-of-life](https://endoflife.date/duckdb), including LTS releases, and shows the 2 most recent patch releases of each. Older patch releases are not listed, but the extension may be available for them as well.
+
+<div class="extension_compatibility_table"></div>
+
+| Platform | 1.4.4 | 1.4.5 | 1.5.5 | 1.5.6 |
+| :--- | :---: | :---: | :---: | :---: |
+| Linux AMD64 | ❌ | ❌ | ✅ | ✅ |
+| Linux ARM64 | ❌ | ❌ | ✅ | ✅ |
+| Linux AMD64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| Linux ARM64 (musl) | ❌ | ❌ | ❌ | ❌ |
+| macOS AMD64 | ❌ | ❌ | ❌ | ❌ |
+| macOS ARM64 | ❌ | ❌ | ✅ | ✅ |
+| Windows AMD64 | ❌ | ❌ | ❌ | ❌ |
+| Windows ARM64 | ❌ | ❌ | ❌ | ❌ |
+| Windows AMD64 (MinGW) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (MVP) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (EH) | ❌ | ❌ | ❌ | ❌ |
+| WebAssembly (threads) | ❌ | ❌ | ❌ | ❌ |
+
 
 ### Installing and Loading
 ```sql
@@ -161,10 +182,11 @@ LOAD {{ page.extension.name }};
 
 <div class="extension_functions_table"></div>
 
-|  function_name   | function_type |                  description                  | comment |                      examples                      |
-|------------------|---------------|-----------------------------------------------|---------|----------------------------------------------------|
-| read_huggingface | table         | Reads a Hugging Face dataset's Parquet files. | NULL    | [SELECT * FROM read_huggingface('lhoestq/demo1');] |
-| read_warc        | table         | Reads records from a local or S3 WARC file.   | NULL    | [SELECT * FROM read_warc('archive.warc.gz');]      |
+|  function_name   | function_type |                             description                              | comment |                      examples                      |
+|------------------|---------------|----------------------------------------------------------------------|---------|----------------------------------------------------|
+| read_atif        | table         | Reads ATIF agent trajectories from a local or S3 JSON or JSONL file. | NULL    | [SELECT * FROM read_atif('trajectories.jsonl');]   |
+| read_huggingface | table         | Reads a Hugging Face dataset's Parquet files.                        | NULL    | [SELECT * FROM read_huggingface('lhoestq/demo1');] |
+| read_warc        | table         | Reads records from a local or S3 WARC file.                          | NULL    | [SELECT * FROM read_warc('archive.warc.gz');]      |
 
 ### Overloaded Functions
 
